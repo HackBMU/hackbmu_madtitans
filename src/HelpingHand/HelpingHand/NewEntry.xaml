@@ -26,9 +26,9 @@
                                 Margin="0,0,0,0">
                     <circleImage:CircleImage x:Name="PhotoImage" 
                                              WidthRequest="200" 
-                                             HeightRequest="300" 
-                                             Source="http://40.71.17.14/images/default_user.jpg"
-                                             Aspect="AspectFill" VerticalOptions="CenterAndExpand" 
+                                             HeightRequest="300"
+                                             Aspect="AspectFit" 
+                                             VerticalOptions="CenterAndExpand" 
                                              HorizontalOptions="CenterAndExpand" 
                                              Margin="75,0,30,0" />
                     <local:CircleButton Clicked="CameraButton_Clicked"
@@ -62,29 +62,31 @@
 
                         <StackLayout Orientation="Horizontal"
                                      Margin="0,0,0,4">
-                            <Image Source="https://i.imgur.com/PXKKleW.png"
+                            <Image x:Name="ic_userNewEntryAge"
                                    Margin="0,0,4,0"/>
                             <Entry x:Name="e_age" 
                                Placeholder="Age (Optional)" 
                                PlaceholderColor="#DCDCDA"
                                TextColor="#24454c" 
+                                   Keyboard="Numeric"
                                FontAttributes="None"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Horizontal"
                                      Margin="0,0,0,4">
-                            <Image Source="https://i.imgur.com/PXKKleW.png"
+                            <Image x:Name="ic_userNewEntryFamilyCount"
                                    Margin="0,0,4,0"/>
                             <Entry x:Name="e_familyCount" 
                                Placeholder="Family Count (Optional)" 
                                PlaceholderColor="#dfdfdf"
                                TextColor="#24454c" 
+                                   Keyboard="Numeric"
                                FontAttributes="None"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Horizontal"
                                      Margin="0,0,0,4">
-                            <Image Source="https://i.imgur.com/PXKKleW.png"
+                            <Image x:Name="ic_userNewEntryAddress"
                                    Margin="0,0,4,0"/>
                             <Entry x:Name="e_streetAddress" 
                                Placeholder="Street Address" 
@@ -95,7 +97,7 @@
 
                         <StackLayout Orientation="Horizontal"
                                      Margin="0,0,0,4">
-                            <Image Source="https://i.imgur.com/PXKKleW.png"
+                            <Image x:Name="ic_userNewEntryAreaCode"
                                    Margin="0,0,4,0"/>
                             <Entry x:Name="e_areaCode" 
                                Placeholder="Area Code" 
@@ -106,7 +108,7 @@
 
                         <StackLayout Orientation="Horizontal"
                                      Margin="0,0,0,4">
-                            <Image Source="https://i.imgur.com/PXKKleW.png"
+                            <Image x:Name="ic_userNewEntryExtraInfo"
                                    Margin="0,0,4,0"/>
                             <Entry x:Name="e_extraInformation" 
                                Placeholder="Extra Information (Optional)" 
@@ -122,6 +124,8 @@
                              HorizontalOptions="EndAndExpand"
                              Margin="16,4,16,16">
                     <Button Text="RESET" 
+                        Clicked="reset_Clicked"
+                        x:Name="resetButton"
                         HeightRequest="50" 
                         WidthRequest="100" 
                         HorizontalOptions="EndAndExpand"

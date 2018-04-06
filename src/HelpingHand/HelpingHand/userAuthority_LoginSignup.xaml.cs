@@ -18,5 +18,12 @@ namespace HelpingHand
             models.user_LoggedInUserData userData = new models.user_LoggedInUserData();
             models.authority_loggedInAuthorityData authorityData = new models.authority_loggedInAuthorityData();
         }
+
+        async void aboutUs_Activated(Object sender, System.EventArgs e)
+        {
+            //await DisplayAlert("Title", "Clicked you", "Ok");
+            //await Navigation.PushAsync(new userAuthority_LoginSignup());
+            await Navigation.PushAsync(new Application_aboutUs());
+        }
     }
 }

@@ -43,6 +43,12 @@ namespace HelpingHand
         public NewEntry()
         {
             InitializeComponent();
+            PhotoImage.Source = MainPage.primaryDomain + "/images/default_user.png";
+            ic_userNewEntryAge.Source = MainPage.primaryDomain + "/images/ic_age.png";
+            ic_userNewEntryFamilyCount.Source = MainPage.primaryDomain + "/images/ic_supervisor_account.png";
+            ic_userNewEntryAddress.Source = MainPage.primaryDomain + "/images/ic_location_city.png";
+            ic_userNewEntryAreaCode.Source = MainPage.primaryDomain + "/images/ic_location_on.png";
+            ic_userNewEntryExtraInfo.Source = MainPage.primaryDomain + "/images/ic_info_outline.png";
 
             var goBackLabel_tap = new TapGestureRecognizer();
             goBackLabel_tap.Tapped += (s, e) =>
@@ -52,12 +58,19 @@ namespace HelpingHand
             //backBar_Label.GestureRecognizers.Add(goBackLabel_tap);
         }
 
+        private void reset_Clicked(object sender, EventArgs e)
+        {
+            PhotoImage.Source = MainPage.primaryDomain + "/images/default_user.png";
+            e_age.Text = "";
+            e_familyCount.Text = "";
+            e_streetAddress.Text = "";
+            e_areaCode.Text = "";
+            e_extraInformation.Text = "";
+        }
+
         private async void submit_Clicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(base64String))
-            {
-                await Task.Delay(3000);
-            }
+
             if (string.IsNullOrEmpty(e_areaCode.Text) || string.IsNullOrEmpty(e_streetAddress.Text)
                 || string.IsNullOrEmpty(base64String) || string.IsNullOrEmpty(models.user_LoggedInUserData.u_id))
             {
@@ -70,6 +83,7 @@ namespace HelpingHand
                 if (additionStatus)
                 {
                     await DisplayAlert("Success!", "Record Has Been Added!", "Ok");
+                    reset_Clicked(null, null);
                     base.OnBackButtonPressed();
                 }
                 else

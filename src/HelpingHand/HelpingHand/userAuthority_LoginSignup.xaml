@@ -7,6 +7,17 @@
             NavigationPage.HasNavigationBar="True"
             IsEnabled="True"
             x:Class="HelpingHand.userAuthority_LoginSignup">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Name="aboutUs" 
+                     Order="Secondary"
+                     Text="About Us" 
+                     Priority="1"
+                     Clicked="aboutUs_Activated"/>
+        <ToolbarItem Name="aboutApp" 
+                     Order="Secondary"
+                     Text="About Application" 
+                     Priority="0" />
+    </TabbedPage.ToolbarItems>
     <local:user_LoginSignup Title="#FORUSERS"/>
     <local:authority_LoginSignup Title="#FORAUTHORITY"/>
 </TabbedPage>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelpingHand.Insights"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             Title="Details" BackgroundColor="#d1d9d5">
+    <StackLayout  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                  Margin="0,0,0,0">
+        <ScrollView RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" 
+                    Margin="0,0,0,0">
+            <StackLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" 
+                         Margin="0,0,0,0">
+
+                <Frame x:Name="Top_Frame"
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                       CornerRadius="2"
+                       Padding="0"
+                       Margin="20,20,20,10"
+                       BackgroundColor="White">
+                    <StackLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" 
+                                 Margin="0,0,0,0">
+                        <Picker x:Name="Insight_Picker"
+                                SelectedIndexChanged="InsightSelected" 
+                                WidthRequest="200"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand" 
+                                Margin="20,0,20,0"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                            <Picker.Items>
+                                <x:String>Select Insight</x:String>
+                                <x:String>World</x:String>
+                                <x:String>Country</x:String>
+                                <x:String>Age Group - World</x:String>
+                                <x:String>Age Group - Country</x:String>
+                            </Picker.Items>
+                            <Picker.SelectedIndex>
+                                0
+                            </Picker.SelectedIndex>
+                        </Picker>
+                        <Picker x:Name="InsightCountry_Picker" 
+                                IsVisible="False"
+                                SelectedIndexChanged="CountrySelected"
+                                WidthRequest="200"
+                                VerticalOptions="CenterAndExpand" 
+                                HorizontalOptions="CenterAndExpand" 
+                                Margin="20,0,20,0"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                        </Picker>
+                    </StackLayout>
+                </Frame>
+
+                <Frame x:Name="Bottom_Frame"
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                       CornerRadius="2" 
+                       Padding="0"  
+                       Margin="20,10,20,10"
+                       BackgroundColor="White">
+                    <StackLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" 
+                                 Margin="0,0,0,0">
+                        <WebView x:Name="mainWebView"
+                                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                                 WidthRequest="500" 
+                                 HeightRequest="500"
+                                 IsVisible="False"/>
+                        <microcharts:ChartView x:Name="chartView" HeightRequest="500" Margin="5,5,5,5" IsVisible="False"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

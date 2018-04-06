@@ -43,11 +43,11 @@
                 Clicked="button_GetClicked"
                 Text="GET STARTED"/>
 
-        <Image Source="https://i.imgur.com/2vqjDz3.png"
-                 Grid.Row="2"
-                 Grid.Column="1"
-                 Grid.ColumnSpan="6"
-                 Grid.RowSpan="4"/>
+        <Image Grid.Row="2"
+               Grid.Column="1"
+               Grid.ColumnSpan="6"
+               Grid.RowSpan="4"
+               x:Name="mainBanner"/>
 
     </Grid>
 </ContentPage>

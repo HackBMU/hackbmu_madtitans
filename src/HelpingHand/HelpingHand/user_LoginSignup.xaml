@@ -83,7 +83,7 @@
                                  Grid.ColumnSpan="8"
                                  Grid.Row="0"
                                  Grid.RowSpan="2">
-                        <Image Source="http://40.71.17.14/images/ic_email.png"/>
+                        <Image x:Name="ic_userloginEmail"/>
                         <Entry x:Name="user_loginEmailID"
                                Placeholder="Email ID"
                                Keyboard="Email"
@@ -95,7 +95,7 @@
                                  Grid.ColumnSpan="8"
                                  Grid.Row="3"
                                  Grid.RowSpan="2">
-                        <Image Source="http://40.71.17.14/images/ic_password.png"/>
+                        <Image x:Name="ic_userloginPassword"/>
                         <Entry x:Name="user_loginPassword"
                                Placeholder="Password"
                                PlaceholderColor="#9e9c9c"
@@ -203,7 +203,7 @@
                                  Grid.ColumnSpan="10"
                                  Grid.Row="0"
                                  Grid.RowSpan="2">
-                        <Image Source="http://40.71.17.14/images/ic_account.png"/>
+                        <Image x:Name="ic_userSignupName"/>
                         <Entry x:Name="user_SignupName"
                                TextColor="#24454c"
                                Placeholder="Full Name"
@@ -215,7 +215,7 @@
                                  Grid.ColumnSpan="10"
                                  Grid.Row="2"
                                  Grid.RowSpan="2">
-                        <Image Source="http://40.71.17.14/images/ic_email.png"/>
+                        <Image x:Name="ic_userSignupEmail"/>
                         <Entry x:Name="user_SignupEmail"
                                TextColor="#24454c"
                                Placeholder="Email ID"
@@ -226,7 +226,7 @@
                                  Grid.ColumnSpan="10"
                                  Grid.Row="4"
                                  Grid.RowSpan="2">
-                        <Image Source="http://40.71.17.14/images/ic_phone.png"/>
+                        <Image x:Name="ic_userSignupPhone"/>
                         <Entry x:Name="user_SignupPhoneNumber"
                                TextColor="#24454c"
                                Placeholder="Phone Number"
@@ -237,7 +237,7 @@
                                  Grid.ColumnSpan="10"
                                  Grid.Row="6"
                                  Grid.RowSpan="2">
-                        <Image Source="http://40.71.17.14/images/ic_account_box.png"/>
+                        <Image x:Name="ic_userSignupIdentification"/>
                         <Entry x:Name="user_IdentificationNumber"
                                TextColor="#24454c"
                                Placeholder="Unique Identification Number"
@@ -248,7 +248,7 @@
                                  Grid.ColumnSpan="10"
                                  Grid.Row="8"
                                  Grid.RowSpan="2">
-                        <Image Source="http://40.71.17.14/images/ic_password.png"/>
+                        <Image x:Name="ic_userSignupPassword"/>
                         <Entry x:Name="user_SignupPassword"
                                TextColor="#24454c"
                                IsPassword="True"

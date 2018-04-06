@@ -19,21 +19,21 @@ namespace HelpingHand
         public ObservableCollection<string> Items { get; set; }
         private ObservableCollection<models.user_PastEntries> _pastEntriesList_Private = new ObservableCollection<models.user_PastEntries> { };
 
-        //protected override async void OnAppearing()
-        //{
+        protected override async void OnAppearing()
+        {
 
-        //    usersPastEntries_ListView.IsRefreshing = true;
-        //    await PastListFetching();
-        //    usersPastEntries_ListView.ItemsSource = _pastEntriesList_Private;
-        //    usersPastEntries_ListView.EndRefresh();
+            usersPastEntries_ListView.IsRefreshing = true;
+            await PastListFetching();
+            usersPastEntries_ListView.ItemsSource = _pastEntriesList_Private;
+            usersPastEntries_ListView.EndRefresh();
 
-        //}
+        }
 
         public users_PastEntries ()
 		{
 			InitializeComponent ();
-            PastListFetching();
-            usersPastEntries_ListView.ItemsSource = _pastEntriesList_Private;
+            ////PastListFetching();
+            //usersPastEntries_ListView.ItemsSource = _pastEntriesList_Private;
         }
 
         private async void usersPastEntries_Refreshing(object sender, EventArgs e)
@@ -60,6 +60,9 @@ namespace HelpingHand
             //    entrySelected.b_age, entrySelected.b_family_count, entrySelected.b_street_address,
             //    entrySelected.b_status, entrySelected.b_ngo_name, "",
             //    entrySelected.b_photo, "user"));
+            await PastListFetching();
+            usersPastEntries_ListView.ItemsSource = _pastEntriesList_Private;
+            usersPastEntries_ListView.EndRefresh();
             usersPastEntries_ListView.SelectedItem = null;
         }
 

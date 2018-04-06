@@ -18,7 +18,7 @@
     </NavigationPage>
     <NavigationPage Title="Insights" NavigationPage.HasNavigationBar="False">
         <x:Arguments>
-            <local:users_Insight NavigationPage.HasNavigationBar="False"/>
+            <local:Insights NavigationPage.HasNavigationBar="False"/>
         </x:Arguments>
     </NavigationPage>
 </TabbedPage>

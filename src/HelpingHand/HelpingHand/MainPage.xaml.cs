@@ -13,7 +13,9 @@ namespace HelpingHand
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+            mainBanner.Source = primaryDomain + "/images/mainBanner.png";
+
+        }
 
         async void button_GetClicked(Object sender,System.EventArgs e)
         {

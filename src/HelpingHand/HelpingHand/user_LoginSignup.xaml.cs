@@ -21,6 +21,15 @@ namespace HelpingHand
         public user_LoginSignup()
 		{
 			InitializeComponent();
+
+            ic_userloginEmail.Source = MainPage.primaryDomain + "/images/ic_email.png";
+            ic_userloginPassword.Source = MainPage.primaryDomain + "/images/ic_password.png";
+            ic_userSignupEmail.Source = MainPage.primaryDomain + "/images/ic_email.png";
+            ic_userSignupName.Source = MainPage.primaryDomain + "/images/ic_account.png";
+            ic_userSignupPhone.Source = MainPage.primaryDomain + "/images/ic_phone.png";
+            ic_userSignupIdentification.Source = MainPage.primaryDomain + "/images/ic_perm_identity.png";
+            ic_userSignupPassword.Source = MainPage.primaryDomain + "/images/ic_password.png";
+
             user_loginEmailID.Text = "kanojia24.10@gmail.com";
             user_loginPassword.Text = "lol";
         }
