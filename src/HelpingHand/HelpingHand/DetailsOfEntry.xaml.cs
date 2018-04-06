@@ -30,6 +30,13 @@ namespace HelpingHand
 		{
 			InitializeComponent ();
 
+            ic_entryDetailAge.Source = MainPage.primaryDomain + "/images/ic_age.png";
+            ic_entryDetailAddress.Source = MainPage.primaryDomain + "/images/ic_address.png";
+            ic_entryDetailDenialReason.Source = MainPage.primaryDomain + "/images/ic_cancel.png";
+            ic_entryDetailFamily.Source = MainPage.primaryDomain + "/images/ic_supervisor_account.png";
+            ic_entryDetailTime.Source = MainPage.primaryDomain + "/images/ic_age.png";
+            
+
             // Tapping the Label to go back.
             var detailsBackLabel_tap = new TapGestureRecognizer();
             detailsBackLabel_tap.Tapped += (s, e) =>

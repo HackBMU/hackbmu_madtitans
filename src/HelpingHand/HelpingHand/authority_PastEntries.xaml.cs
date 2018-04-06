@@ -33,19 +33,19 @@ namespace HelpingHand
         //    return comicList.Where(c => c.e_id.ToLower().StartsWith(searchText.ToLower()));
         //}
 
-        //protected override async void OnAppearing()
-        //{
-        //    authorityPastEntries_ListView.IsRefreshing = true;
-        //    await PastListFetching();
-        //    authorityPastEntries_ListView.ItemsSource = _pastEntriesList_Private;
-        //    authorityPastEntries_ListView.EndRefresh();
-        //}
+        protected override async void OnAppearing()
+        {
+            authorityPastEntries_ListView.IsRefreshing = true;
+            await PastListFetching();
+            authorityPastEntries_ListView.ItemsSource = _pastEntriesList_Private;
+            authorityPastEntries_ListView.EndRefresh();
+        }
 
         public authority_PastEntries()
         {
             InitializeComponent();
-            PastListFetching();
-            authorityPastEntries_ListView.ItemsSource = _pastEntriesList_Private;
+            ////PastListFetching();
+            //authorityPastEntries_ListView.ItemsSource = _pastEntriesList_Private;
         }
 
         private async void authorityPastEntries_Refreshing(object sender, EventArgs e)
@@ -67,6 +67,9 @@ namespace HelpingHand
                 entrySelected.b_status, entrySelected.b_ngo_name, "",
                 entrySelected.b_photo, "ngo"));
             authorityPastEntries_ListView.SelectedItem = null;
+            await PastListFetching();
+            authorityPastEntries_ListView.ItemsSource = _pastEntriesList_Private;
+            authorityPastEntries_ListView.EndRefresh();
         }
 
         public async Task PastListFetching()

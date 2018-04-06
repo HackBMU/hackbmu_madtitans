@@ -20,6 +20,17 @@ namespace HelpingHand
         public authority_LoginSignup ()
 		{
 			InitializeComponent ();
+
+            ic_authorityLoginEmail.Source = MainPage.primaryDomain + "/images/ic_email.png";
+            ic_authorityLoginPassword.Source = MainPage.primaryDomain + "/images/ic_password.png";
+
+            ic_authoritySignupName.Source = MainPage.primaryDomain + "/images/ic_account.png";
+            ic_authoritySignupEmail.Source = MainPage.primaryDomain + "/images/ic_email.png";
+            ic_authoritySignupPhone.Source = MainPage.primaryDomain + "/images/ic_phone.png";
+            ic_authoritySignupIdentification.Source = MainPage.primaryDomain + "/images/ic_perm_identity.png";
+            ic_authoritySignupPassword.Source = MainPage.primaryDomain + "/images/ic_password.png";
+            ic_authoritySignupAddress.Source = MainPage.primaryDomain + "/images/ic_address.png";
+
             authority_loginEmailID.Text = "kanojia24.10@gmail.com";
             authority_loginPassword.Text = "test";
 		}

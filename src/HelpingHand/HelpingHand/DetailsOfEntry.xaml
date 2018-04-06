@@ -62,7 +62,7 @@
                     <StackLayout Orientation="Vertical">
                         <StackLayout Orientation="Horizontal"
                                  Margin="0,0,0,4">
-                            <Image Source="http://40.71.17.14/images/ic_account.png"
+                            <Image x:Name="ic_entryDetailAge"
                                Margin="0,0,4,0"
                                VerticalOptions="Start"/>
                             <Label Text="Reported Age:"
@@ -79,7 +79,7 @@
                         </StackLayout>
                         <StackLayout Orientation="Horizontal"
                                  Margin="0,0,0,4">
-                            <Image Source="http://40.71.17.14/images/ic_account.png"
+                            <Image x:Name="ic_entryDetailFamily"
                                Margin="0,0,4,0"
                                VerticalOptions="Start"/>
                             <Label Text="Family Count:"
@@ -97,7 +97,7 @@
                         <StackLayout Orientation="Vertical">
                             <StackLayout Orientation="Horizontal"
                                  Margin="0,0,0,4">
-                                <Image Source="http://40.71.17.14/images/ic_address.png"
+                                <Image x:Name="ic_entryDetailAddress"
                                        Margin="0,0,4,0"
                                        VerticalOptions="Start"/>
                                 <Label Text="Street Address:"
@@ -130,7 +130,7 @@
                                  IsVisible="False">
                             <StackLayout Orientation="Horizontal"
                                  Margin="0,0,0,4">
-                                <Image Source="http://40.71.17.14/images/ic_account.png"
+                                <Image x:Name="ic_entryDetailTime"
                                    Margin="0,0,4,0"
                                VerticalOptions="Start"/>
                                 <Label Text="Estimated Time (Weeks):"
@@ -165,7 +165,7 @@
                                  IsVisible="False">
                             <StackLayout Orientation="Horizontal"
                                  Margin="0,0,0,4">
-                                <Image Source="http://40.71.17.14/images/ic_account.png"
+                                <Image x:Name="ic_entryDetailDenialReason"
                                    Margin="0,0,4,0"
                                VerticalOptions="Start"/>
                                 <Label Text="Reason for Denial:"

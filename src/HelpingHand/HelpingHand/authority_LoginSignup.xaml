@@ -83,7 +83,7 @@
                                  Grid.ColumnSpan="8"
                                  Grid.Row="0"
                                  Grid.RowSpan="2">
-                        <Image Source="https://i.imgur.com/lWi3m79.png"/>
+                        <Image x:Name="ic_authorityLoginEmail"/>
                         <Entry x:Name="authority_loginEmailID"
                                Placeholder="Email ID"
                                Keyboard="Email"
@@ -95,7 +95,7 @@
                                  Grid.ColumnSpan="8"
                                  Grid.Row="3"
                                  Grid.RowSpan="2">
-                        <Image Source="https://i.imgur.com/MDIb7Hy.png"/>
+                        <Image x:Name="ic_authorityLoginPassword"/>
                         <Entry x:Name="authority_loginPassword"
                                Placeholder="Password"
                                PlaceholderColor="#9e9c9c"
@@ -209,7 +209,7 @@
                                  Grid.ColumnSpan="14"
                                  Grid.Row="0"
                                  Grid.RowSpan="2">
-                        <Image Source="https://i.imgur.com/PXKKleW.png"/>
+                        <Image x:Name="ic_authoritySignupName"/>
                         <Entry x:Name="authority_SignupName"
                                TextColor="#24454c"
                                Placeholder="Registered Name of Office"
@@ -221,7 +221,7 @@
                                  Grid.ColumnSpan="14"
                                  Grid.Row="2"
                                  Grid.RowSpan="2">
-                        <Image Source="https://i.imgur.com/lWi3m79.png"/>
+                        <Image x:Name="ic_authoritySignupEmail"/>
                         <Entry x:Name="authority_SignupEmail"
                                TextColor="#24454c"
                                Placeholder="Registered Email ID"
@@ -232,7 +232,7 @@
                                  Grid.ColumnSpan="14"
                                  Grid.Row="4"
                                  Grid.RowSpan="2">
-                        <Image Source="https://i.imgur.com/yUGxvhG.png"/>
+                        <Image x:Name="ic_authoritySignupPhone"/>
                         <Entry x:Name="authority_SignupPhoneNumber"
                                TextColor="#24454c"
                                Placeholder="Registered Phone Number"
@@ -243,7 +243,7 @@
                                  Grid.ColumnSpan="14"
                                  Grid.Row="6"
                                  Grid.RowSpan="2">
-                        <Image Source="https://i.imgur.com/PXKKleW.png"/>
+                        <Image x:Name="ic_authoritySignupIdentification"/>
                         <Entry x:Name="authority_RegistrationeNumber"
                                TextColor="#24454c"
                                Placeholder="Office Identification Number"
@@ -254,7 +254,7 @@
                                  Grid.ColumnSpan="14"
                                  Grid.Row="8"
                                  Grid.RowSpan="2">
-                        <Image Source="https://i.imgur.com/MDIb7Hy.png"/>
+                        <Image x:Name="ic_authoritySignupPassword"/>
                         <Entry x:Name="authority_SignupPassword"
                                TextColor="#24454c"
                                IsPassword="True"
@@ -266,7 +266,7 @@
                                  Grid.ColumnSpan="14"
                                  Grid.Row="10"
                                  Grid.RowSpan="2">
-                        <Image Source="https://i.imgur.com/JjOPPHh.png"/>
+                        <Image x:Name="ic_authoritySignupAddress"/>
                         <Entry x:Name="authority_Address"
                        TextColor="#24454c"
                        Placeholder="Registered Address"
