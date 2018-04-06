@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelpingHand.DetailsOfEntry"
+             Title="Candidate Details"
+             xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             BackgroundColor="#DCDCDA">
+    <StackLayout Padding="16">
+        <StackLayout>
+            <circleImage:CircleImage x:Name="entry_Image" 
+                                     WidthRequest="200"
+                                     HeightRequest="200" 
+                                     Aspect="AspectFill" 
+                                     VerticalOptions="CenterAndExpand" 
+                                     HorizontalOptions="CenterAndExpand"
+                                     Margin="0,24,0,4"/>
+            <Picker x:Name="entry_Status" 
+                    IsEnabled="False" 
+                    IsVisible="False"
+                    SelectedIndexChanged="StatusChanged"
+                    TextColor="#fcfcfc"
+                    Title="Status"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand">
+                <Picker.Items>
+                    <x:String>ACCEPTED</x:String>
+                    <x:String>IN CONTACT</x:String>
+                    <x:String>DENIED</x:String>
+                    <x:String>BLOCKED</x:String>
+                    <x:String>OPEN</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label x:Name="user_entry_Status"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#24454C"
+                   IsVisible="False"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="0,4,0,24">
+            </Label>
+            <Label x:Name="ngo_entry_Status"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#24454C"
+                   IsVisible="False"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="0,4,0,24">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="label_TapGesture"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Frame CornerRadius="2"
+                       BackgroundColor="#FCFCFC"
+                       HasShadow="True"
+                       Padding="16,16,32,16"
+                       Margin="0,0,0,4">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal"
+                                 Margin="0,0,0,4">
+                            <Image Source="http://40.71.17.14/images/ic_account.png"
+                               Margin="0,0,4,0"
+                               VerticalOptions="Start"/>
+                            <Label Text="Reported Age:"
+                               TextColor="#3F3F3F"
+                               VerticalOptions="Center"
+                               FontSize="Medium"/>
+                            <Label x:Name="entry_Age"
+                               FontSize="Medium"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               HorizontalTextAlignment="End"
+                               TextColor="#24454c"
+                               FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                 Margin="0,0,0,4">
+                            <Image Source="http://40.71.17.14/images/ic_account.png"
+                               Margin="0,0,4,0"
+                               VerticalOptions="Start"/>
+                            <Label Text="Family Count:"
+                               TextColor="#3F3F3F"
+                               VerticalOptions="Center"
+                               FontSize="Medium"/>
+                            <Label x:Name="entry_FamilyCount"
+                               FontSize="Medium"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               HorizontalTextAlignment="End"
+                               TextColor="#24454c"
+                               FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal"
+                                 Margin="0,0,0,4">
+                                <Image Source="http://40.71.17.14/images/ic_address.png"
+                                       Margin="0,0,4,0"
+                                       VerticalOptions="Start"/>
+                                <Label Text="Street Address:"
+                                       TextColor="#3F3F3F"
+                                       VerticalOptions="Center"
+                                       Margin="0,0,10,0"
+                                       FontSize="Medium"/>
+                                <Label x:Name="entry_StreetAddress"
+                                       FontSize="Medium"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="EndAndExpand"
+                                       HorizontalTextAlignment="End"
+                                       TextColor="#24454c"
+                                       FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame CornerRadius="2"
+                       BackgroundColor="#FCFCFC"
+                       HasShadow="True"
+                       Padding="16,16,32,16"
+                       Margin="0,4,0,0"
+                       x:Name="ngo_CandidateDetails"
+                       IsVisible="False">
+                    <StackLayout Orientation="Vertical"
+                                 IsVisible="True">
+                        <StackLayout Orientation="Vertical"
+                                 x:Name="Contacting_StackLayout"
+                                 IsVisible="False">
+                            <StackLayout Orientation="Horizontal"
+                                 Margin="0,0,0,4">
+                                <Image Source="http://40.71.17.14/images/ic_account.png"
+                                   Margin="0,0,4,0"
+                               VerticalOptions="Start"/>
+                                <Label Text="Estimated Time (Weeks):"
+                               TextColor="#3F3F3F"
+                               VerticalOptions="Center"
+                               FontSize="Medium"/>
+                                <Entry x:Name="estimatedTime"
+                               FontSize="Medium"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               HorizontalTextAlignment="End"
+                               TextColor="#24454c"
+                                   Keyboard="Numeric"
+                                   Placeholder="Weeks"
+                                   PlaceholderColor="#AFAFBB"
+                               FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical"
+                                 x:Name="Accepted_StackLayout"
+                                 IsVisible="False">
+                            <Label Text="Upload a Proof "
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="#24454c"
+                                   FontAttributes="Bold"
+                                   FontSize="Medium"
+                                   HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical"
+                                 x:Name="Denied_StackLayout"
+                                 IsVisible="False">
+                            <StackLayout Orientation="Horizontal"
+                                 Margin="0,0,0,4">
+                                <Image Source="http://40.71.17.14/images/ic_account.png"
+                                   Margin="0,0,4,0"
+                               VerticalOptions="Start"/>
+                                <Label Text="Reason for Denial:"
+                               TextColor="#3F3F3F"
+                               VerticalOptions="Center"
+                               FontSize="Medium"/>
+                                <Entry x:Name="denied_Entry"
+                               FontSize="Medium"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               HorizontalTextAlignment="End"
+                               TextColor="#24454c"
+                                   Placeholder="Reason for Denial/Block"
+                                   PlaceholderColor="#AFAFBB"
+                               FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <StackLayout Orientation="Horizontal"
+                             Margin="0,4,0,0"
+                             HorizontalOptions="EndAndExpand">
+                    <Button x:Name="AcceptanceProof_Button" 
+                                    Text="Upload Proof" 
+                                    CornerRadius="2"
+                                    BackgroundColor="#24454c"
+                                    TextColor="#fcfcfc"
+                                    Clicked="proofButton_Clicked"
+                                    HorizontalOptions="End"
+                        IsVisible="False"/>
+                    <Button x:Name="Submit_Button" 
+                        Text="SUBMIT" 
+                        TextColor="#fcfcfc"
+                        BackgroundColor="#24454c"
+                        Clicked="SubmitButton_Clicked" 
+                        VerticalOptions="EndAndExpand"
+                        CornerRadius="2"
+                            Margin="4,0,0,0"
+                        IsVisible="False"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

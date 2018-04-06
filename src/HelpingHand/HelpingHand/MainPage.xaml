@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelpingHand"
+             BackgroundColor="#ffffff"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="HelpingHand.MainPage">
+
+    <Grid Padding="16"
+          ColumnSpacing="10"
+          RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="button"
+                Grid.Row="7"
+                Grid.ColumnSpan="8"
+                HeightRequest="50"
+                BackgroundColor="#24454C"
+                BorderRadius="2"
+                TextColor="#ffffff"
+                FontAttributes="Bold"
+                FontSize="16"
+                Clicked="button_GetClicked"
+                Text="GET STARTED"/>
+
+        <Image Source="https://i.imgur.com/2vqjDz3.png"
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="6"
+                 Grid.RowSpan="4"/>
+
+    </Grid>
+</ContentPage>
