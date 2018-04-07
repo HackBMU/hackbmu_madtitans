@@ -1,40 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HelpingHand.authority_AllList"
-             xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+             x:Class="HelpingHand.authority_AllList">
     <ContentPage.Content>
         <StackLayout Padding="0,5,0,0">
 
-            <ListView x:Name="authorityAllEntries_ListView" 
-                  HasUnevenRows="True"
-                  IsPullToRefreshEnabled="True" 
-                  Refreshing="authorityAllEntries_Refreshing"
-                  ItemSelected="authorityAllEntries_ItemSelected"
-                  BackgroundColor="#FCFCFC">
+            <ListView x:Name="authorityAllEntries_ListView" HasUnevenRows="True"
+              IsPullToRefreshEnabled="True" Refreshing="authorityAllEntries_Refreshing"
+                  ItemSelected="authorityAllEntries_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal" 
-                                         Padding="16,4,16,4"
-                                         VerticalOptions="CenterAndExpand">
-                                <circleImage:CircleImage Source="{Binding  b_photo}" 
-                                       Aspect="AspectFit"
-                                       WidthRequest="50" 
-                                       HeightRequest="50"
-                                       Margin="4"/>
-                                <StackLayout HorizontalOptions="StartAndExpand" 
-                                             Padding="16,8,16,8">
-                                    <Label Text="{Binding b_status_text}" 
-                                           TextColor="#24454c"
-                                           FontAttributes="Bold"
-                                           FontSize="Medium"
-                                           VerticalTextAlignment="Center"/>
-                                    <Label Text="{Binding b_street_address}" 
-                                           TextColor="#24454c"
-                                           FontAttributes="None"
-                                           FontSize="Small"
-                                           Font="14"/>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Image Source="{Binding  e_photo}" Aspect="AspectFill" WidthRequest="100" HeightRequest="100"/>
+                                <StackLayout HorizontalOptions="StartAndExpand" Padding="2">
+                                    <Label Text="{Binding e_address}" TextColor="Black"/>
+                                    <Label Text="{Binding e_status}" TextColor="Gray"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>

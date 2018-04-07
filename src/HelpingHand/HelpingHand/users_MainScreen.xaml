@@ -3,22 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HelpingHand"
              x:Class="HelpingHand.users_MainScreen"
-            NavigationPage.HasBackButton="False"
-            Title="#FORUSER Dashboard">
+            Title="Title Of The Application">
   <!--Pages can be added as references or inline-->
-    <NavigationPage Title="RECENT" NavigationPage.HasNavigationBar="False">
+    <NavigationPage Title="Past Records" NavigationPage.HasNavigationBar="False">
         <x:Arguments>
             <local:users_PastEntries NavigationPage.HasNavigationBar="False"/>
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="ALL" NavigationPage.HasNavigationBar="False">
+    <NavigationPage Title="All Records" NavigationPage.HasNavigationBar="False">
         <x:Arguments>
             <local:users_AllList NavigationPage.HasNavigationBar="False"/>
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Insights" NavigationPage.HasNavigationBar="False">
         <x:Arguments>
-            <local:Insights NavigationPage.HasNavigationBar="False"/>
+            <local:users_Insight NavigationPage.HasNavigationBar="False"/>
         </x:Arguments>
     </NavigationPage>
 </TabbedPage>

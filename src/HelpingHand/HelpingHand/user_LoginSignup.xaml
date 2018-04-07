@@ -1,13 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="#DCDCDA"
+             BackgroundColor="#c4daff"
              x:Class="HelpingHand.user_LoginSignup">
 
     <StackLayout x:Name="user_LoginLayout">
-        <Grid x:Name="grid_UserLoginLayout" 
+    <Grid x:Name="grid_UserLoginLayout" 
           Padding="16"
+          ColumnSpacing="10"
+          RowSpacing="20"
           IsVisible="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="loginField"
+              Padding="16"
+              BackgroundColor="#ffffff"
+              Grid.ColumnSpan="8"
+              Grid.RowSpan="4"
+              Grid.Column="0"
+              Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -15,17 +46,6 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -34,43 +54,11 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <BoxView BackgroundColor="#00000000"/>
-
-            <Frame BackgroundColor="#ffffff"
-               Grid.ColumnSpan="8"
-               Grid.RowSpan="8"
-               CornerRadius="2"
-               Grid.Row="2"
-               HasShadow="True">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Button x:Name="user_Login"
-                    Grid.Row="7"
-                    Grid.Column="7"
+            <Button x:Name="user_Login"
+                    Grid.Row="6"
+                    Grid.Column="5"
                     Grid.ColumnSpan="3"
                     Grid.RowSpan="2"
                     Text="LOGIN"
@@ -79,47 +67,73 @@
                     Clicked="user_LoginSignupClicked"
                     BackgroundColor="#24454C"/>
 
-                    <StackLayout Orientation="Horizontal"
-                                 Grid.ColumnSpan="8"
-                                 Grid.Row="0"
-                                 Grid.RowSpan="2">
-                        <Image x:Name="ic_userloginEmail"/>
-                        <Entry x:Name="user_loginEmailID"
-                               Placeholder="Email ID"
-                               Keyboard="Email"
-                               PlaceholderColor="#9e9c9c"
-                               TextColor="#24454c"/>
-                    </StackLayout>
+            <Label x:Name="user_forgotPassword"
+                   TextColor="#ff022c"
+                   Text="Forgot Password?"
+                   Grid.Row="6"
+                   Grid.ColumnSpan="3"
+                   Grid.Column="0"/>
 
-                    <StackLayout Orientation="Horizontal"
-                                 Grid.ColumnSpan="8"
-                                 Grid.Row="3"
-                                 Grid.RowSpan="2">
-                        <Image x:Name="ic_userloginPassword"/>
-                        <Entry x:Name="user_loginPassword"
-                               Placeholder="Password"
-                               PlaceholderColor="#9e9c9c"
-                               TextColor="#24454c"
-                               IsPassword="True"/>
-                    </StackLayout>
-                </Grid>
-            </Frame>
+            <Entry x:Name="user_loginEmailID"
+                   Placeholder="Email ID"
+                   PlaceholderColor="#9e9c9c"
+                   TextColor="#24454c"
+                   Grid.RowSpan="2"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="8"/>
 
-            <Button x:Name="button"
-                Grid.Row="15"
-                Grid.ColumnSpan="8"
-                Grid.RowSpan="2"
-                BackgroundColor="#E7E7E5"
-                BorderRadius="2"
-                TextColor="#24454C"
-                FontAttributes="Bold"
-                FontSize="16"
-                Clicked="user_LogintoSignup"
-                Text="New Account? SIGNUP"/>
+            <Entry x:Name="user_loginPassword"
+                   Placeholder="Password"
+                   PlaceholderColor="#9e9c9c"
+                   TextColor="#24454c"
+                   Grid.RowSpan="2"
+                   Grid.Column="0"
+                   Grid.Row="2"
+                   IsPassword="True"
+                   Grid.ColumnSpan="8"/>
+
         </Grid>
 
-        <Grid x:Name="grid_UserSignupLayout"
+        <Grid BackgroundColor="#00000000"
+              Padding="16"
+              Grid.Row="6"
+              Grid.ColumnSpan="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="res/ic_facebook.png"
+                   Grid.Column="3"/>
+            <Image Source="res/ic_googleplus.png"
+                   Grid.Column="4"/>
+            <Image Source="res/ic_twitter.png"
+                   Grid.Column="5"/>
+            <Image Source="res/ic_microsoft.png"
+                   Grid.Column="6"/>
+        </Grid>
+        
+        <Button x:Name="button"
+                Grid.Row="7"
+                Grid.ColumnSpan="8"
+                HeightRequest="50"
+                BackgroundColor="#ffffff"
+                BorderRadius="2"
+                TextColor="#24454c"
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="New Account? SIGNUP"
+                Clicked="user_LogintoSignup"/>
+    </Grid>
+        <Grid x:Name="grid_UserSignupLayout" 
           Padding="16"
+          ColumnSpacing="10"
+          RowSpacing="20"
           IsVisible="False">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -130,16 +144,8 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-
             </Grid.RowDefinitions>
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -151,118 +157,68 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <BoxView BackgroundColor="#00000000"/>
+            <Grid Padding="16"
+                  BackgroundColor="#ffffff"
+                  Grid.Row="1"
+                  Grid.RowSpan="6"
+                  Grid.ColumnSpan="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Frame BackgroundColor="#ffffff"
-               Grid.ColumnSpan="8"
-               Grid.RowSpan="10"
-               CornerRadius="2"
-               Padding="16"
-               Grid.Row="2"
-               HasShadow="True">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                <Entry x:Name="user_SignupName"
+                       TextColor="#24454c"
+                       Placeholder="Full Name"
+                       PlaceholderColor="#9e9c9c"
+                       Grid.ColumnSpan="8"/>
+                <Entry x:Name="user_SignupEmail"
+                       TextColor="#24454c"
+                       Grid.Row="1"
+                       Placeholder="Email ID"
+                       PlaceholderColor="#9e9c9c"
+                       Grid.ColumnSpan="8"/>
+                <Entry x:Name="user_SignupPhoneNumber"
+                       TextColor="#24454c"
+                       Grid.Row="2"
+                       Placeholder="Phone Number"
+                       PlaceholderColor="#9e9c9c"
+                       Grid.ColumnSpan="8"/>
+                <Entry x:Name="user_SignupPassword"
+                       TextColor="#24454c"
+                       Grid.Row="3"
+                       IsPassword="True"
+                       Placeholder="Password"
+                       PlaceholderColor="#9e9c9c"
+                       Grid.ColumnSpan="8"/>
 
-                    <Button x:Name="user_SignupButton"
-                        Grid.Row="10"
-                        Grid.Column="10"
-                        Grid.ColumnSpan="5"
-                        Grid.RowSpan="2"
+                <Button x:Name="user_SignupButton"
+                        Grid.Row="5"
+                        BackgroundColor="#24454c"
+                        Grid.Column="5"
                         Text="REGISTER"
-                        TextColor="#ffffff"
                         BorderRadius="2"
-                        BackgroundColor="#24454C"
-                        Clicked="user_SignupClicked"/>
-
-                    <StackLayout Orientation="Horizontal"
-                                 Grid.ColumnSpan="10"
-                                 Grid.Row="0"
-                                 Grid.RowSpan="2">
-                        <Image x:Name="ic_userSignupName"/>
-                        <Entry x:Name="user_SignupName"
-                               TextColor="#24454c"
-                               Placeholder="Full Name"
-                               PlaceholderColor="#9e9c9c"
-                               Grid.ColumnSpan="8"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal"
-                                 Grid.ColumnSpan="10"
-                                 Grid.Row="2"
-                                 Grid.RowSpan="2">
-                        <Image x:Name="ic_userSignupEmail"/>
-                        <Entry x:Name="user_SignupEmail"
-                               TextColor="#24454c"
-                               Placeholder="Email ID"
-                               PlaceholderColor="#9e9c9c"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal"
-                                 Grid.ColumnSpan="10"
-                                 Grid.Row="4"
-                                 Grid.RowSpan="2">
-                        <Image x:Name="ic_userSignupPhone"/>
-                        <Entry x:Name="user_SignupPhoneNumber"
-                               TextColor="#24454c"
-                               Placeholder="Phone Number"
-                               PlaceholderColor="#9e9c9c"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal"
-                                 Grid.ColumnSpan="10"
-                                 Grid.Row="6"
-                                 Grid.RowSpan="2">
-                        <Image x:Name="ic_userSignupIdentification"/>
-                        <Entry x:Name="user_IdentificationNumber"
-                               TextColor="#24454c"
-                               Placeholder="Unique Identification Number"
-                               PlaceholderColor="#9e9c9c"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal"
-                                 Grid.ColumnSpan="10"
-                                 Grid.Row="8"
-                                 Grid.RowSpan="2">
-                        <Image x:Name="ic_userSignupPassword"/>
-                        <Entry x:Name="user_SignupPassword"
-                               TextColor="#24454c"
-                               IsPassword="True"
-                               Placeholder="Password"
-                               PlaceholderColor="#9e9c9c"/>
-                    </StackLayout>
-                </Grid>
-            </Frame>
-
+                        Clicked="user_LoginSignupClicked"
+                        TextColor="#ffffff"
+                        Grid.ColumnSpan="3"/>
+            </Grid>
             <Button x:Name="button_userSignup"
-                Grid.Row="15"
+                Grid.Row="7"
                 Grid.ColumnSpan="8"
-                Grid.RowSpan="2"
-                BackgroundColor="#E7E7E5"
+                HeightRequest="50"
+                BackgroundColor="#ffffff"
                 BorderRadius="2"
                 TextColor="#24454c"
                 FontAttributes="Bold"
@@ -270,6 +226,5 @@
                 Text="Existing Account? LOGIN"
                 Clicked="user_LogintoSignup"/>
         </Grid>
-
     </StackLayout>
 </ContentPage>
