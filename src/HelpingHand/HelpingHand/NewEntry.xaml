@@ -1,148 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HelpingHand.NewEntry"
-             NavigationPage.HasNavigationBar="True"
-             NavigationPage.HasBackButton="True"
-             xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
-              xmlns:local="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
-             Title="Add a New Record">
-    <StackLayout RelativeLayout.HeightConstraint="{ConstraintExpression 
-        Type=RelativeToParent, 
-        Property=Height}"
-                 RelativeLayout.WidthConstraint="{ConstraintExpression 
-        Type=RelativeToParent, 
-        Property=Width}"
-                 Margin="0,0,0,0"
-                 BackgroundColor="#DCDCDA">
-        <ScrollView RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
-                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" 
-                    Margin="0,0,0,0">
-            <StackLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
-                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" 
-                         Margin="0,0,0,0">
-                <RelativeLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
-                                Margin="0,0,0,0">
-                    <circleImage:CircleImage x:Name="PhotoImage" 
-                                             WidthRequest="200" 
-                                             HeightRequest="300" 
-                                             Source="http://40.71.17.14/images/default_user.jpg"
-                                             Aspect="AspectFill" VerticalOptions="CenterAndExpand" 
-                                             HorizontalOptions="CenterAndExpand" 
-                                             Margin="75,0,30,0" />
-                    <local:CircleButton Clicked="CameraButton_Clicked"
-                            BackgroundColor="#24454c"
-                            BorderWidth="50"
-                            BorderThickness="20"
-                            BorderColor="#24454c"
-                            HeightRequest="56"
-                            WidthRequest="56"
-                            Text="+"
-                            FontSize="30"
-                            FontAttributes="None"
-                            TextColor="#ffffff"
-                            HorizontalOptions="EndAndExpand"
-                            VerticalOptions="End"
-                                        Margin="210,200,30,0"/>
-                </RelativeLayout>
-                <Frame RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
-                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" 
-                       CornerRadius="2" 
-                       Padding="16"  
-                       Margin="16,0,16,0" 
-                       BackgroundColor="#FCFCFC">
-                    <StackLayout x:Name="newRequestsPage"
-                                 RelativeLayout.HeightConstraint="{ConstraintExpression 
-                        Type=RelativeToParent, 
-                        Property=Height}"
-                                 RelativeLayout.WidthConstraint="{ConstraintExpression 
-                        Type=RelativeToParent, 
-                        Property=Width}">
+             x:Class="HelpingHand.NewEntry">
+    <ContentPage.Content>
+        <StackLayout x:Name="newRequestsPage"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+            <Image x:Name="PhotoImage" Margin="10,0,10,5"/>
+            <Button x:Name="CameraButton" Text="Take Photo" Margin="10,0,10,5" Clicked="CameraButton_Clicked"/>
 
-                        <StackLayout Orientation="Horizontal"
-                                     Margin="0,0,0,4">
-                            <Image Source="https://i.imgur.com/PXKKleW.png"
-                                   Margin="0,0,4,0"/>
-                            <Entry x:Name="e_age" 
-                               Placeholder="Age (Optional)" 
-                               PlaceholderColor="#DCDCDA"
-                               TextColor="#24454c" 
-                               FontAttributes="None"/>
-                        </StackLayout>
+            <!--<Entry x:Name="e_photo" Placeholder="Blood Type" PlaceholderColor="#dfdfdf"
+                           TextColor="Black" FontAttributes="None" BackgroundColor="White"
+                           HorizontalTextAlignment="Center" Margin="10,0,10,5"/>-->
 
-                        <StackLayout Orientation="Horizontal"
-                                     Margin="0,0,0,4">
-                            <Image Source="https://i.imgur.com/PXKKleW.png"
-                                   Margin="0,0,4,0"/>
-                            <Entry x:Name="e_familyCount" 
-                               Placeholder="Family Count (Optional)" 
-                               PlaceholderColor="#dfdfdf"
-                               TextColor="#24454c" 
-                               FontAttributes="None"/>
-                        </StackLayout>
-
-                        <StackLayout Orientation="Horizontal"
-                                     Margin="0,0,0,4">
-                            <Image Source="https://i.imgur.com/PXKKleW.png"
-                                   Margin="0,0,4,0"/>
-                            <Entry x:Name="e_streetAddress" 
-                               Placeholder="Street Address" 
-                               PlaceholderColor="#DCDCDA"
-                               TextColor="#24454c"
-                               FontAttributes="None"/>
-                        </StackLayout>
-
-                        <StackLayout Orientation="Horizontal"
-                                     Margin="0,0,0,4">
-                            <Image Source="https://i.imgur.com/PXKKleW.png"
-                                   Margin="0,0,4,0"/>
-                            <Entry x:Name="e_areaCode" 
-                               Placeholder="Area Code" 
-                               PlaceholderColor="#DCDCDA"
-                               TextColor="#24454c" 
-                               FontAttributes="None"/>
-                        </StackLayout>
-
-                        <StackLayout Orientation="Horizontal"
-                                     Margin="0,0,0,4">
-                            <Image Source="https://i.imgur.com/PXKKleW.png"
-                                   Margin="0,0,4,0"/>
-                            <Entry x:Name="e_extraInformation" 
-                               Placeholder="Extra Information (Optional)" 
-                               PlaceholderColor="#DCDCDA"
-                               TextColor="#24454c" 
-                               FontAttributes="None"/>
-                        </StackLayout>
-
-                    </StackLayout>
-                </Frame>
-                <StackLayout Orientation="Horizontal"
-                             VerticalOptions="End"
-                             HorizontalOptions="EndAndExpand"
-                             Margin="16,4,16,16">
-                    <Button Text="RESET" 
-                        HeightRequest="50" 
-                        WidthRequest="100" 
-                        HorizontalOptions="EndAndExpand"
-                        VerticalOptions="EndAndExpand"
-                        TextColor="#24454c" 
-                        BackgroundColor="#ffffff" 
-                        FontAttributes="None" 
-                        CornerRadius="2"
-                        Margin="0,0,8,0"/>
-                    <Button Text="SUBMIT" 
-                        Clicked="submit_Clicked" 
-                        HeightRequest="50" 
-                        WidthRequest="100" 
-                        HorizontalOptions="EndAndExpand"
-                        VerticalOptions="EndAndExpand"
-                        TextColor="White" 
-                        BackgroundColor="#24454c" 
-                        FontAttributes="None" 
-                        CornerRadius="2"/>
-                </StackLayout>
-            </StackLayout>
-        </ScrollView>
-    </StackLayout>
+            <Entry x:Name="e_streetAddress" Placeholder="Area Code" PlaceholderColor="#dfdfdf"
+                           TextColor="Black" FontAttributes="None" BackgroundColor="White"
+                           HorizontalTextAlignment="Center" Margin="10,0,10,5"/>
+            <Entry x:Name="e_extraInformation" Placeholder="Contact Number" PlaceholderColor="#dfdfdf"
+                           TextColor="Black" FontAttributes="None" BackgroundColor="White"
+                           HorizontalTextAlignment="Center" Margin="10,0,10,5"/>
+            <Button Text="Submit" Clicked="submit_Clicked" TextColor="White" 
+                    BackgroundColor="#cc181e" FontAttributes="None" Margin="10,0,10,5"/>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

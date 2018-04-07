@@ -4,7 +4,7 @@
              x:Class="HelpingHand.authority_Insight">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Under Development."
+            <Label Text="Under Dev!!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

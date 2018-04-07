@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpingHand.Android", "HelpingHand\HelpingHand.Android\HelpingHand.Android.csproj", "{1A126180-BF15-406F-98B1-AADAD17F6D87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpingHand.UWP", "HelpingHand\HelpingHand.UWP\HelpingHand.UWP.csproj", "{2709D78E-F92E-4432-8924-7902AF8ECA78}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelpingHand", "HelpingHand\HelpingHand\HelpingHand.csproj", "{1A52A9D5-E5FE-49E3-8768-C672DD8FC702}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpingHand", "HelpingHand\HelpingHand\HelpingHand.csproj", "{1A52A9D5-E5FE-49E3-8768-C672DD8FC702}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,8 +46,6 @@ Global
 		{1A126180-BF15-406F-98B1-AADAD17F6D87}.Release|x86.Build.0 = Release|Any CPU
 		{1A126180-BF15-406F-98B1-AADAD17F6D87}.Release|x86.Deploy.0 = Release|Any CPU
 		{2709D78E-F92E-4432-8924-7902AF8ECA78}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{2709D78E-F92E-4432-8924-7902AF8ECA78}.Debug|Any CPU.Build.0 = Debug|x86
-		{2709D78E-F92E-4432-8924-7902AF8ECA78}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{2709D78E-F92E-4432-8924-7902AF8ECA78}.Debug|ARM.ActiveCfg = Debug|ARM
 		{2709D78E-F92E-4432-8924-7902AF8ECA78}.Debug|ARM.Build.0 = Debug|ARM
 		{2709D78E-F92E-4432-8924-7902AF8ECA78}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -89,5 +87,20 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {91BBF9BE-8EE2-4634-B54A-C03D563D066C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://madtitans.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HelpingHand\\HelpingHand.Android\\HelpingHand.Android.csproj
+		SccProjectName1 = HelpingHand/HelpingHand.Android
+		SccLocalPath1 = HelpingHand\\HelpingHand.Android
+		SccProjectUniqueName2 = HelpingHand\\HelpingHand.UWP\\HelpingHand.UWP.csproj
+		SccProjectName2 = HelpingHand/HelpingHand.UWP
+		SccLocalPath2 = HelpingHand\\HelpingHand.UWP
+		SccProjectUniqueName3 = HelpingHand\\HelpingHand\\HelpingHand.csproj
+		SccProjectName3 = HelpingHand/HelpingHand
+		SccLocalPath3 = HelpingHand\\HelpingHand
 	EndGlobalSection
 EndGlobal

@@ -13,9 +13,8 @@ namespace HelpingHand
 		public App ()
 		{
 			InitializeComponent();
+
             MainPage = new NavigationPage(new MainPage());
-            //HelpingHands.NewEntry = new NavigationPage(new NewEntry());
-            //NewEntry = new NavigationPage(new NewEntry());
             // NOTE: use for debugging, not in released app code!
             //var assembly = typeof(EmbeddedImages).GetTypeInfo().Assembly;
             //foreach (var res in assembly.GetManifestResourceNames())

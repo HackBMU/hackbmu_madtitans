@@ -9,7 +9,6 @@ namespace HelpingHand
 {
 	public partial class MainPage : ContentPage
 	{
-        public static string primaryDomain = "http://40.71.17.14";
 		public MainPage()
 		{
 			InitializeComponent();

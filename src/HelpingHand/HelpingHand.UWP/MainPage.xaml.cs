@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using static HelpingHand.NewEntry;
 
 namespace HelpingHand.UWP
 {
@@ -21,19 +20,8 @@ namespace HelpingHand.UWP
         public MainPage()
         {
             this.InitializeComponent();
-            Xamarin.FormsMaps.Init();
 
             LoadApplication(new HelpingHand.App());
-        }
-    }
-
-    public class MyImageCompressor_Android : MyImageCompressor
-    {
-        public MyImageCompressor_Android() { }
-
-        public string ImageCompressor(byte[] bitmapBytes)
-        {
-            return "asdsa";
         }
     }
 }

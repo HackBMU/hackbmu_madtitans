@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelpingHand.Application_aboutUs"
+             xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             Title="About Us">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#E7E7E5"
+                     Padding="16">
+            <Frame x:Name="ankitPassi"
+                   Padding="16"
+                   BackgroundColor="#FCFCFC"
+                   HasShadow="True"
+                   Margin="0,0,0,8">
+                <StackLayout Orientation="Horizontal">
+                    <circleImage:CircleImage x:Name="ankit_PhotoImage" 
+                                             WidthRequest="75" 
+                                             HeightRequest="75"
+                                             Aspect="AspectFill" 
+                                             VerticalOptions="CenterAndExpand" 
+                                             HorizontalOptions="Center" />
+                    <StackLayout HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand">
+                        <Label HorizontalOptions="FillAndExpand"
+                               Text="UI/UX Developer"
+                               TextColor="#24454c"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               HorizontalTextAlignment="Center"
+                               Margin="0,8,0,16"/>
+                        <Grid Padding="0"
+                              Margin="0"
+                              ColumnSpacing="0"
+                              HorizontalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0"
+                                    x:Name="ankit_githubButton">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="ankit_GitubTap"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Grid.Column="1"
+                                    x:Name="ankit_linkedInButton">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="ankit_linkedInTap"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Grid.Column="2"
+                                    x:Name="ankit_behanceButton">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="ankit_behanceTap"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame x:Name="dhruvKanojia"
+                   Padding="16"
+                   BackgroundColor="#FCFCFC"
+                   HasShadow="True"
+                   Margin="0,0,0,8">
+                <StackLayout Orientation="Horizontal">
+                    <circleImage:CircleImage x:Name="dhruv_PhotoImage" 
+                                             WidthRequest="75" 
+                                             HeightRequest="75"
+                                             Aspect="AspectFill" 
+                                             VerticalOptions="CenterAndExpand" 
+                                             HorizontalOptions="Center" />
+                    <StackLayout HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand">
+                        <Label HorizontalOptions="FillAndExpand"
+                               Text="Back-end Developer"
+                               TextColor="#24454c"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               HorizontalTextAlignment="Center"
+                               Margin="0,8,0,16"/>
+                        <Grid Padding="0"
+                              Margin="0"
+                              ColumnSpacing="0"
+                              HorizontalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0"
+                                    x:Name="dhruv_githubButton">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="dhruv__GitubTap"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Grid.Column="1"
+                                    x:Name="dhruv_linkedInButton">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="dhruv_linkedInTap"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Grid.Column="2"
+                                    x:Name="dhruv_blogButton">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="dhruv_blogTap"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame x:Name="shivangiMittal"
+                   Padding="16"
+                   BackgroundColor="#FCFCFC"
+                   HasShadow="True"
+                   Margin="0,0,0,8">
+                <StackLayout Orientation="Horizontal">
+                    <circleImage:CircleImage x:Name="shivangi_PhotoImage" 
+                                             WidthRequest="75" 
+                                             HeightRequest="75"
+                                             Aspect="AspectFill" 
+                                             VerticalOptions="CenterAndExpand" 
+                                             HorizontalOptions="Center" />
+                    <StackLayout HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand">
+                        <Label HorizontalOptions="FillAndExpand"
+                               Text="Web Developer"
+                               TextColor="#24454c"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               HorizontalTextAlignment="Center"
+                               Margin="0,8,0,16"/>
+                        <Grid Padding="0"
+                              Margin="0"
+                              ColumnSpacing="0"
+                              HorizontalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0"
+                                    x:Name="shivangi_githubButton">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="shivangi_GitubTap"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Grid.Column="1"
+                                    x:Name="shivangi_linkedInButton">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="shivangi_linkedInTap"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Grid.Column="2"
+                                    x:Name="shivangi_facebookButton">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="shivangi_facebookTap"  />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

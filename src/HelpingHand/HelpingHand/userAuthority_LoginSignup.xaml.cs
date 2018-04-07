@@ -15,8 +15,6 @@ namespace HelpingHand
         public userAuthority_LoginSignup ()
         {
             InitializeComponent();
-            models.user_LoggedInUserData userData = new models.user_LoggedInUserData();
-            models.authority_loggedInAuthorityData authorityData = new models.authority_loggedInAuthorityData();
         }
     }
 }
