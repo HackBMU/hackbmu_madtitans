@@ -164,6 +164,6 @@ But, if for some reason, you don't want to or can't install Visual Studio, you w
 
 ## 7.  Team
 ### Team Name : MadTitans
-- #### [Ankit Pass](https://bitbucket.org/ankitpassi141/) (UI/UX Designer & Developer)
+- #### [Ankit Passi](https://bitbucket.org/ankitpassi141/) (UI/UX Designer & Developer)
 - #### [Dhruv Kanojia](https://bitbucket.org/Xonshiz/) (Lead Developer)
 - #### [Shivangi Mittal](https://bitbucket.org/Shivangi48/) (Website Designer/ Developer)
