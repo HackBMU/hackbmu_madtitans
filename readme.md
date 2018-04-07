@@ -77,10 +77,10 @@ Let  us remind you again that the minimum Android OS that you need to run this p
     - Camera (For Taking Pictures)
 
 - #### Instructions For Direct APK Installation :
-    If you want to run this application on your android phone, please move over to the "[`Downloads`](https://github.com/HackBMU/hackbmu_madtitans)" section and download the latest stable APK build for your android phone. You do not need any external libraries or application.
+    If you want to run this application on your android phone, please move over to the "[`Downloads`](https://github.com/HackBMU/hackbmu_madtitans/tree/master/release)" section and download the latest stable APK build for your android phone. You do not need any external libraries or application.
 
 - #### Instructions For Developers/Testers :
-     If you're a developer or any user who wishes to test this application and run this android project, it's recommended to install Visual Studio with Xamarin Support and Android SDKs on your system. Remember that Android SDKs should be in your local path for you to be able to compile the project properly. You can find the source code in the "[SOURCE](https://bitbucket.org/madtitans/helping-hands/src)" directory.
+     If you're a developer or any user who wishes to test this application and run this android project, it's recommended to install Visual Studio with Xamarin Support and Android SDKs on your system. Remember that Android SDKs should be in your local path for you to be able to compile the project properly. You can find the source code in the "[SOURCE](https://github.com/HackBMU/hackbmu_madtitans/tree/master/src)" directory.
 
     If you do not happen to have Visual Studio, it is recommended to get it because it'll download all the required packages on its own, if they're not present. You can use Visual Studio's Free Community Edition. It'll work, as we've developed this application on it.
 
